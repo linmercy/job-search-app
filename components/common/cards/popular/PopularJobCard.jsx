@@ -16,7 +16,7 @@ const PopularJobCard = () => {
         <Image 
           source={{url: checkImageURL(item.employer_logo) 
             ? item.employer_logo 
-            : ' ' //add fetchurl
+            : 'https://t4.fcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg' //add fetchurl
           }} 
           resizeMode='contain'
           style={styles.logoImage}
