@@ -1,3 +1,4 @@
+//check if thr company has company logo
 export const checkImageURL = (url) => {
     if (!url) return(false)
     else{
