@@ -1,4 +1,3 @@
-import React from 'react'
 import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router'
 import { COLORS } from '../../../constants'

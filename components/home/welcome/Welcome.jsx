@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
 import { useRouter } from 'expo-router'
@@ -11,7 +10,7 @@ const jobTypes = ['Full-time', 'Part-time', 'Contracts' ]
 
 const Welcome = () => {
   const router = useRouter()
-  const [activeJobType, setactiveJobType] = useState('Full-time')
+  const [activeJobType, setActiveJobType] = useState('Full-time')
   return (
     <View>
       <View style = {styles.container}>
@@ -34,7 +33,7 @@ const Welcome = () => {
           />
         </View>
 
-        <TouchableOpacity style={styles.searchBtn}>
+        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
           <Image source={icons.search} resizeMode='contain' style={styles.searchBtnImage} />
         </TouchableOpacity>
       </View>
@@ -42,10 +41,10 @@ const Welcome = () => {
       <View style={styles.tabsContainer}>
         <FlatList
            data={jobTypes}
-           renderItem={() => {
+           renderItem={( item ) => {
             <TouchableOpacity style={styles.tab(activeJobType, item)}
               onPress={() => {
-                setactiveJobType(item)
+                setActiveJobType(item)
                 router.push(`/search/${item}`)
               }}
             >

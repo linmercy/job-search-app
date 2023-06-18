@@ -1,4 +1,3 @@
-import React from 'react'
 import { View, Text, TouchableOpacity, Image} from 'react-native'
 import { checkImageURL } from '../../../../utils'
 
@@ -14,7 +13,7 @@ const NearbyJobCard = ({job, handleNavigate}) => {
         style={styles.logoContainer}
       >
         <Image 
-          source={{url: checkImageURL(job.employer_logo) 
+          source={{uri: checkImageURL(job.employer_logo) 
             ? job.employer_logo 
             : 'https://t4.fcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg' //add fetchurl
           }} 
